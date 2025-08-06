@@ -79,4 +79,8 @@ ENDPOINT_CONFIGS.forEach((config) => {
   setupEndpointHandlers(config.path, config.options);
 });
 
+const reqlineHandler = require('./endpoints/reqline');
+
+server.addHandler(reqlineHandler);
+
 server.startServer();

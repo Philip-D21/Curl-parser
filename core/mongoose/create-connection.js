@@ -19,7 +19,8 @@ const mongoose = require('mongoose');
  */
 async function createConnection(connectionConfig) {
   const connectionResult = {};
-  const { uri = process.env.MONGODB_URI, isNotDefault } = connectionConfig;
+  const { uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/resilient17', isNotDefault } =
+    connectionConfig;
   const connectionOptions = {
     // useNewUrlParser: true,
     // useUnifiedTopology: true,

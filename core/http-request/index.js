@@ -1,5 +1,6 @@
 /* eslint-disable no-param-reassign */
 const FormData = require('form-data');
+const axios = require('axios');
 const requestProxy = require('./request-proxy');
 
 const REQUEST_TIMEOUT = parseInt(process.env.HTTP_REQUEST_TIMEOUT, 10) || 15000;
@@ -129,4 +130,7 @@ HttpRequest.put = httpInstance.put;
 HttpRequest.delete = httpInstance.delete;
 HttpRequest.utility = { FormData };
 
-module.exports = HttpRequest;
+module.exports = {
+  HttpRequest,
+  axios,
+};
