@@ -19,7 +19,7 @@ const mongoose = require('mongoose');
  */
 async function createConnection(connectionConfig) {
   const connectionResult = {};
-  const { uri = process.env.MONGODB_URI || 'mongodb+srv://philip:Nqa7X7Azqx9XCQo2@cluster0.u4he4rd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', isNotDefault } =
+  const { uri = process.env.MONGODB_URI, isNotDefault } =
     connectionConfig;
   const connectionOptions = {
     // useNewUrlParser: true,
